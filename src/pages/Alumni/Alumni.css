@@ -1,0 +1,43 @@
+.alumni-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0a1a 100%);
+    color: white;
+    padding-top: 80px;
+}
+
+.alumni-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.alumni-hero {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.alumni-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #800080, #a020f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.alumni-hero p {
+    font-size: 1.2rem;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .alumni-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .alumni-container {
+        padding: 1rem;
+    }
+}
