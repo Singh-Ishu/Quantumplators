@@ -35,6 +35,26 @@ function Landing() {
         spotLight1.position.set(5, 2, 0);
         spotLight1.rotation.z = Math.PI / 2;
         spotLight1.castShadow = true;
+
+        // --- Mouse-controlled PointLight ---
+        const pointLight = new THREE.PointLight(0x800080, 5, 100);
+        pointLight.position.set(1, 0, 0); // Set a static x position
+        scene.add(pointLight);
+
+        // Function to handle mouse movement
+        const onMouseMove = (event) => {
+            // Normalize mouse coordinates to a range of -1 to 1
+            const mouseZ = -(event.clientX / window.innerWidth) * 2 + 1;
+            const mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+
+            // Map normalized coordinates to the light's position
+            // The scaling factor to change the movement range
+            pointLight.position.z = mouseZ * 5;
+            pointLight.position.y = mouseY * 5;
+        };
+
+        window.addEventListener("mousemove", onMouseMove);
+
         // Load the 3D model
         const loader = new GLTFLoader();
         loader.load(
@@ -82,9 +102,10 @@ function Landing() {
                 mountRef.current.removeChild(renderer.domElement);
             }
             window.removeEventListener("resize", handleResize);
+            window.removeEventListener("mousemove", onMouseMove); // Remove mouse event listener
             renderer.dispose();
         };
-    }, []); // The empty dependency array ensures this effect runs only once
+    }, []);
 
     return <div ref={mountRef} />;
 }
