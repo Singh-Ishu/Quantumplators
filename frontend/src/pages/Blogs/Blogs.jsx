@@ -13,7 +13,7 @@ function Blogs() {
             readTime: "8 min read",
             category: "Quantum Computing",
             image: "https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg",
-            tags: ["Quantum Supremacy", "AI", "Technology"]
+            tags: ["Quantum Supremacy", "AI", "Technology"],
         },
         {
             id: 2,
@@ -24,7 +24,7 @@ function Blogs() {
             readTime: "6 min read",
             category: "Cryptography",
             image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg",
-            tags: ["Security", "Encryption", "Quantum Keys"]
+            tags: ["Security", "Encryption", "Quantum Keys"],
         },
         {
             id: 3,
@@ -35,8 +35,8 @@ function Blogs() {
             readTime: "10 min read",
             category: "Machine Learning",
             image: "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg",
-            tags: ["AI", "Neural Networks", "Algorithms"]
-        }
+            tags: ["AI", "Neural Networks", "Algorithms"],
+        },
     ];
 
     return (
@@ -44,7 +44,10 @@ function Blogs() {
             <div className="blogs-container">
                 <div className="blogs-hero">
                     <h1>Blogs & Articles</h1>
-                    <p>Insights, research findings, and thought leadership in quantum computing</p>
+                    <p>
+                        Insights, research findings, and thought leadership in
+                        quantum computing
+                    </p>
                 </div>
                 <BlogList blogs={blogs} />
             </div>

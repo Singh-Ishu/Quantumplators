@@ -12,9 +12,10 @@ function Alumni() {
             company: "IBM Quantum",
             graduationYear: "2019",
             specialization: "Quantum Algorithms",
-            achievements: "Led development of quantum error correction protocols",
+            achievements:
+                "Led development of quantum error correction protocols",
             linkedin: "#",
-            email: "sarah.chen@example.com"
+            email: "sarah.chen@example.com",
         },
         {
             id: 2,
@@ -26,7 +27,7 @@ function Alumni() {
             specialization: "Quantum Machine Learning",
             achievements: "Published 15+ papers on quantum ML algorithms",
             linkedin: "#",
-            email: "michael.rodriguez@example.com"
+            email: "michael.rodriguez@example.com",
         },
         {
             id: 3,
@@ -38,7 +39,7 @@ function Alumni() {
             specialization: "Quantum Cryptography",
             achievements: "Pioneer in quantum key distribution systems",
             linkedin: "#",
-            email: "emily.johnson@example.com"
+            email: "emily.johnson@example.com",
         },
         {
             id: 4,
@@ -50,7 +51,7 @@ function Alumni() {
             specialization: "Quantum Hardware",
             achievements: "Founded successful quantum computing startup",
             linkedin: "#",
-            email: "david.kim@example.com"
+            email: "david.kim@example.com",
         },
         {
             id: 5,
@@ -62,7 +63,7 @@ function Alumni() {
             specialization: "Quantum Optimization",
             achievements: "Expert in variational quantum algorithms",
             linkedin: "#",
-            email: "lisa.wang@example.com"
+            email: "lisa.wang@example.com",
         },
         {
             id: 6,
@@ -74,8 +75,8 @@ function Alumni() {
             specialization: "Quantum Software",
             achievements: "Developed quantum programming frameworks",
             linkedin: "#",
-            email: "james.thompson@example.com"
-        }
+            email: "james.thompson@example.com",
+        },
     ];
 
     return (
@@ -83,7 +84,10 @@ function Alumni() {
             <div className="alumni-container">
                 <div className="alumni-hero">
                     <h1>Notable Alumni</h1>
-                    <p>Meet our distinguished graduates who are leading the quantum revolution worldwide</p>
+                    <p>
+                        Meet our distinguished graduates who are leading the
+                        quantum revolution worldwide
+                    </p>
                 </div>
                 <AlumniCards alumni={alumni} />
             </div>
